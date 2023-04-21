@@ -1,0 +1,3 @@
+address_videocapture=""
+user_id=""
+key_token=""
