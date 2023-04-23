@@ -4,12 +4,13 @@ This program connects to a video camera and detects the presence of a person, se
 REQUIREMENTS:
   It is requirest create a bot python and insert in the file configurazione.txt the keys
   and the URL for connects at the videocapture in the browser
+  Create an virtual enviroment
 
 
 TO RUN:
 In one shell:
-  mkvirtualenv --python=/usr/bin/python3 mysite-virtualenv;
-  tele.py;
+  run the virtual enviroment.
+  run tele.py
 In other shell:
   eseguibile.sh
 
