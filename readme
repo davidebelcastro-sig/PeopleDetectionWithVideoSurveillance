@@ -1,0 +1,13 @@
+run this command : mkvirtualenv --python=/usr/bin/python3 mysite-virtualenv, an then,on same shell run :tele.py
+on other shell run : eseguibile.sh
+
+
+The program connects at the videocapture and analize the video,it i possibile to active/deactive the alarm with telegram.But before it is requirest create a bot python and insert in the file configurazione.txt the keys
+in the file configurazione.txt insert the URL for connects at the videocapture in the browser
+
+Install:
+
+install in this dir:
+yolov3.cfg
+yolov3.weights
+coco.names

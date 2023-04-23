@@ -1,19 +1,19 @@
 
-#get this on telegram
-import telebot
 
+import telebot
 user_id = ''
 API_TOKEN =  ''
 fp = open("file_configurazione.txt","r")
 for riga in fp:
     if riga.startswith("user_id"):
         ls = riga.split("=")
-        user_id = ls[1]
+        user_id = ls[1][:-1]
     elif riga.startswith("key_token"):
         ls = riga.split("=")
-        API_TOKEN = ls[1]
+        API_TOKEN = ls[1][:-1]
 fp.close()
 bot = telebot.TeleBot(API_TOKEN)
+
 # Handle '/start' and '/help'
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
@@ -40,6 +40,10 @@ def echo_message(message):
         bot.reply_to(message, "allarme off")
         fp= open("attiva.txt","w")
         fp.write("off")
+        fp.close()
+    elif message.text== 'sirena':
+        bot.reply_to(message, "sirena attivata")
+        fp=open("result.txt","w")
         fp.close()
     else:
         bot.reply_to(message, "non capisco")

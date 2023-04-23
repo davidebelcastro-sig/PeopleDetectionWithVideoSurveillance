@@ -38,6 +38,16 @@ oraList=[nextOra]
 #get this from telegram
 api_key = ''
 user_id = ''
+fp = open("file_configurazione.txt","r")
+for riga in fp:
+    if riga.startswith("user_id"):
+        ls = riga.split("=")
+        user_id = ls[1][:-1]
+    elif riga.startswith("key_token"):
+        ls = riga.split("=")
+        api_key = ls[1][:-1]
+   
+fp.close()
 try:
     f = open("appo","r")
     f.close()

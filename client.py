@@ -3,17 +3,17 @@ import cv2
 from PIL import Image
 from selenium import webdriver
 
+
 address = ""
 fp = open("file_configurazione.txt","r")
 for riga in fp:
     if riga.startswith("address_videocapture"):
         ls = riga.split("=")
-        address = ls[1]
+        address = ls[1][:-1]
    
 fp.close()
 browser = webdriver.Chrome()
 browser.get(address)
-
 
 volt=0
 while 1:
