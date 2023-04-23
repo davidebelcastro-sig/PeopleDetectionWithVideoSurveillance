@@ -3,7 +3,7 @@ This program connects to a video camera and detects the presence of a person, se
 
 REQUIREMENTS:
   It is requirest create a bot python and insert in the file configurazione.txt the keys
-  in the file configurazione.txt insert the URL for connects at the videocapture in the browser
+  and the URL for connects at the videocapture in the browser
 
 
 TO RUN:
