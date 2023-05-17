@@ -14,6 +14,7 @@ import telegram
 import time
 import datetime
 import os
+import music
 
 
 
@@ -98,11 +99,11 @@ def processMessages(net,output_layers):
                             #break 
                     #if trov == 1:
                         #break
-            if trov == 1:
+            if trov == 1:  #devo mettere 1
                 bot = telegram.Bot(token=api_key)
                 bot.send_message(chat_id=user_id, text='ATTENZIONE!!!!!!!!!!!!\nRILEVATA PERSONA')
                 bot.sendPhoto(chat_id=user_id, photo=open("salvata2.png","rb"))
-                os.system("python music.py")
+                music.sound()
                             
                 #ricevo da utente messaggio di bloccare il suono
             if str(time.strftime("%H%M")) in oraList:
